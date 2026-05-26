@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Lab Safety Monitor</title>
+</head>
+<body>
+    <h1>Smart Lab Safety Monitor</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label>Temperature (°C):</label>
+        <input type="number" name="temperature" step="any" required><br>
+
+        <label>Humidity (%):</label>
+        <input type="number" name="humidity" step="any" required><br>
+
+        <label>Smoke Level (ppm):</label>
+        <input type="number" name="smoke_level" step="any" required><br>
+
+        <label>Gas Leak Level (ppm):</label>
+        <input type="number" name="gas_leak" step="any" required><br>
+
+        <label>Fire Detected (0 or 1):</label>
+        <input type="number" name="fire" min="0" max="1" required><br>
+
+        <label>Motion Detected (0 or 1):</label>
+        <input type="number" name="motion" min="0" max="1" required><br>
+
+        <label>Time of Day:</label>
+        <select name="time_of_day" required>
+            <option value="0">Morning</option>
+            <option value="1">Afternoon</option>
+            <option value="2">Evening</option>
+            <option value="3">Night</option>
+        </select><br><br>
+
+        <button type="submit">Check Safety</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Lab Safety Status: {{ prediction }}</h2>
+    {% endif %}
+    {% if error %}
+        <p style="color:red;">Error: {{ error }}</p>
+    {% endif %}
+    <h4>Temp:{{a}} </h4><br> <br>
+    <h4>humidity:{{b}} </h4><br> <br>
+    <h4>mq2 sensor:{{c}} </h4><br> <br>
+    
+</body>
+</html>
