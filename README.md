@@ -5,7 +5,7 @@ Smart Lab Safety Monitoring is a Django-based web application integrated with Ma
 
 The system helps improve laboratory safety by monitoring environmental conditions and generating alerts for unsafe situations.
 
----
+
 
 ## Features
 - Real-time safety monitoring
@@ -15,7 +15,7 @@ The system helps improve laboratory safety by monitoring environmental condition
 - Alert generation system
 - Data storage using SQLite
 
----
+
 
 ## Technologies Used
 - Python
@@ -25,7 +25,7 @@ The system helps improve laboratory safety by monitoring environmental condition
 - HTML/CSS
 - IoT Concepts
 
----
+
 
 ## Project Structure
 
@@ -38,7 +38,7 @@ myproject/
 ├── myproject/
 ```
 
----
+
 
 ## How to Run the Project
 
@@ -60,12 +60,11 @@ cd smart-lab-safety-monitoring
 python manage.py runserver
 ```
 
----
+
 
 ## Future Enhancements
 - Live IoT sensor integration
 - SMS/Email alerts
 - Advanced hazard prediction
 
----
 
